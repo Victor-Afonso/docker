@@ -8,11 +8,14 @@ if [ $? = 0 ]
 then echo “Já possui zip”
 else echo “Instalando zip”
 sudo apt install zip
+fi
+
 echo "adicionando o caminho sdk ao curl"
 curl -s "https://get.sdkman.io" | bash
-fi
+
 echo "reiniciar o terminal"
 source "/home/$usuario/.sdkman/bin/sdkman-init.sh"
+
 echo "buscado para ver se tem java"
 which java
 if [ $? = 0 ]
@@ -65,7 +68,7 @@ fi
 
 echo "acessando o repositório"
 cd repositorio-ec2-pi
-cd banco-monitech3
+cd java-cli
 cd target
 echo "executando o jar"
 java -jar banco-teste-1.0-SNAPSHOT-jar-with-dependencies.jar
