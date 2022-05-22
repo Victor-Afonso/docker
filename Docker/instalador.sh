@@ -18,7 +18,7 @@ which java
 if [ $? = 0 ]
 then echo “Já possui java”
 else echo “Instalando java”
-sdk install java 11.0.12.7.1-amzn 
+sdk install java 11.0.12.7.1-amzn
 fi
 
 echo "versão do java"
@@ -51,10 +51,6 @@ sudo docker build -t monitech_img:1.0 .
 echo "executando o container com mysql"
 sudo docker run -d -p 3306:3306 --name MonitechBD monitech_img:1.0
 
-echo "mostrando o status do container"
-sudo docker stats MonitechBD
-
-
 echo "procurando o repositório"
 cd "repositorio-ec2-pi"
 
@@ -76,6 +72,3 @@ java -jar banco-teste-1.0-SNAPSHOT-jar-with-dependencies.jar
 echo "execução completa"
 
 echo "instalação completa"
-
-
-
