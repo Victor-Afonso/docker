@@ -54,6 +54,9 @@ sudo docker build -t monitech_img:1.0 .
 echo "executando o container com mysql"
 sudo docker run -d -p 3306:3306 --name MonitechBD monitech_img:1.0
 
+echo "atualizando os pacotes"
+sudo apt update && sudo apt upgrade
+ 
 echo "instalando a GUI"
 sudo apt-get install xrdp lxde-core lxde tigervnc-standalone-server -y
 
