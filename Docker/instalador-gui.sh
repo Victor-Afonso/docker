@@ -72,10 +72,21 @@ cd $caminho
 git pull
 fi
 
+echo "acessando o repositório"
+cd repositorio-ec2-pi
+cd java-cli
+cd target
+
+clear
+
 echo "███    ███  ██████  ███    ██ ██ ████████ ███████  ██████ ██   ██ "
 echo "████  ████ ██    ██ ████   ██ ██    ██    ██      ██      ██   ██ "
 echo "██ ████ ██ ██    ██ ██ ██  ██ ██    ██    █████   ██      ███████ "
 echo "██  ██  ██ ██    ██ ██  ██ ██ ██    ██    ██      ██      ██   ██ "
 echo "██      ██  ██████  ██   ████ ██    ██    ███████  ██████ ██   ██ "
 echo "                                                                  "
+                                                                  
+echo "executando o jar"
+java -jar banco-teste-1.0-SNAPSHOT-jar-with-dependencies.jar
+
 
